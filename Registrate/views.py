@@ -11,6 +11,5 @@ def create_nombre(request):
     return redirect('/Registrate/')
 
 def delete_dato(request, Nombre_id):
-    Nombre = nombre.objects.get(id=Nombre_id)
-    Nombre.delete()
+    print(Nombre_id)
     return redirect('/Registrate/')
