@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Editar</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1 class="display-6 fw-bold">Actualizar</h1>   
+
+                    <form method="POST" id="form">
+                        {% csrf_token %}
+                        <label for="Nombre">Ingrese su Nombre:</label>
+                        <input type="text" name="nombre" placeholder="Escribe tu nombre" class="form-control mb-2" value="{{Nombre.nombre}}">  
+                        <label for="Apellido">Ingrese su Apellido:</label>
+                        <input type="text" name="apellido" placeholder="Escribe tu apellido" class="form-control mb-2" value="{{Nombre.apellido}}">
+                        <label for="Ciuada">Ingrese su Ciudad:</label>
+                        <input type="text" name="ciudad" placeholder="Escribe tu ciudad" class="form-control mb-2" value="{{Nombre.ciudad}}">
+            
+                        <button class="btn btn-success">Actualizar</button>
+                    </form>  
+    </body>
+</html>

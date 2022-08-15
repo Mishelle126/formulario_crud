@@ -14,7 +14,7 @@
                 <div class="col-md-4 offset-md-4">
                     <h1 class="display-6 fw-bold">Datos</h1>   
 
-                    <form action="{% url 'create_nombre' %}" method="POST" class="card card-body bg-warning">
+                    <form action="{% url 'create_nombre' %}" method="POST" class="card card-body bg-secondary">
                         {% csrf_token %}
                         <label for="Nombre">Ingrese su Nombre:</label>
                         <input type="text" name="nombre" placeholder="Escribe tu nombre" class="form-control mb-2">  
@@ -25,6 +25,7 @@
             
                         <button class="btn btn-success">Save</button>
                     </form>  
+                
             
                     {% for Nombre in Nombre %}
                     <div class="card card-body bg-info mt-2 d-flex flex-row justify-content-between">
@@ -37,6 +38,8 @@
                             {% csrf_token %}
                             <button class="bg-danger">Borrar</button>
                         </form>
+                        
+                        <a href="{% url 'editar_dato' Nombre.id %}"><button>Actualizar</button></a>
             
                     
                     </div>
